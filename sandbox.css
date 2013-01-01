@@ -61,12 +61,15 @@ nav.text span{
 	color:white;
 }
 .homeImage{
-	width:850px;
+	width:810px;
+	height:350px;
 	margin-left:auto;
 	margin-right:auto;
 	min-width:500px;
-	margin-bottom:0;
+	margin-bottom:-15px;
 	background-image:url('images/coffee-bg.jpg');
+    background-repeat:no-repeat;
+    z-index:-1;
 }
 .homeText
 {
@@ -96,7 +99,7 @@ a.home:hover{
 }
 footer{
 	width:100%; 
-	height:50px; 
+	height:60px; 
 	background-color:black;
 	width:850px;
 	min-width:500px;
