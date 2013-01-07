@@ -11,6 +11,7 @@
 	<meta name = "description" content = "Coffee 8065 provides a qualitiy coffee experience to Makati locals and beyond. For a great coffee experience in Makati come visit 8065 Coffee.">
 
 <link rel="stylesheet" type="text/css" href="sandbox.css">
+    <script type = "text/javascript" src = "javascript/menu.js"></script>
 
 </head>
 <body class="fullpage">
@@ -25,6 +26,8 @@
 	<a href="hours.html">Hours of Operation</a>
 </nav>
 <menu class = "background" style = "padding-bottom:30px;">
+        <span style = "text-align: left">Drinks</span>
+        <span style = "text-align: right"><a href = "javascript: void(0);" onclick = "document.getElementById('food').style.display='block';"> Food </a> </span>
 	<div class = "menuLeftHeading"> Hot Drinks &nbsp&nbsp</div>
 	<div class = "menuRightHeading"> Cold Drinks&nbsp&nbsp&nbsp </div><div style = "clear:both"></div>
 	<div class = "menuLeftText">Caffe Latte'.......60<br>
@@ -36,7 +39,8 @@
 		Iced Latte ..........80<br>
 		Iced Cappuccino ...80</div>
 	<div style = "clear:both"></div>
-	<div class = "menuLeftHeading"> Bread &nbsp&nbsp</div>
+	<div style = "display:none" id = food>
+        <div class = "menuLeftHeading">Bread &nbsp&nbsp</div>
 	<div style = "clear:both"></div>
 	<div class = "menuLeftText">
 		Cinnamon Bread .........................40<br>
@@ -46,6 +50,7 @@
 		Toasted Bread w/ Butter & Bacon ...80<br>
 		Pastillas per Piece .......................5<br>
 		Pastillas per Pack .......................50</div>
+    </div>
 	
 	
 </menu>
