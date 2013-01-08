@@ -149,6 +149,7 @@ a.hours:hover{ color:white;}
 menu.background{
 	margin-top:0;
 	margin-bottom:0;
+    margin-left:0;
 	background-color:#E8E8E8;
 	width:810px;
 	height:500px;
@@ -258,4 +259,11 @@ menu.background{
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:12px;
 	text-align:center;
+}
+.menuSubHeader{
+width = 810px;
+height:20px;
+margin-left:-40px;
+padding:2px 0 2px 0;
+background-color:#800517;
 }
