@@ -68,6 +68,58 @@ nav.text{
 nav.text span{
 	color:white;
 }
+.menuSubNavLeft{
+position:relative;
+float:left;
+width:200px;
+height:30px;
+background-color:blue;
+z-index:1;
+margin-left:150px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:5px;
+border-right:thick;
+border-color:black;
+}
+#drinkSubNav{
+	font-size:24px;
+	line-height:30px;
+	padding-left:10px;
+	padding-right:auto;
+	padding-left:60px;
+}
+.menuSubNavRight{
+position:relative;
+float:right;
+margin-right:150px;
+height:30px;
+width:200px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:5px;
+}
+#foodSubNav{
+	font-size:24px;
+	padding-left:10px;
+	padding-right:auto;
+	padding-left:60px;
+	line-height:30px;
+
+}
+.menuSubBar{
+padding-left:50px;
+}
+#menuTitle{
+	position:relative;
+	width:100%;
+	height:20px;
+	font-size:30px !important;
+	font-style:italic;
+	padding:25px 0 0 0;
+	text-align:center;
+	}
+.menuTitle span{
+	text-align:center;
+	}
 .homeImage{
 	width:810px;
 	height:350px;
@@ -147,14 +199,14 @@ a.hours:active{color:red; text-decoration:none;}
 a.hours:hover{ color:white;}
 
 menu.background{
-	margin-top:0;
-	margin-bottom:0;
-    margin-left:0;
 	background-color:#E8E8E8;
-	width:810px;
+	width:850px;
 	height:500px;
 	margin-left:auto;
 	margin-right:auto;
+	padding:0;
+	margin-top:0;
+	margin-bottom:0;
 }
 .menuLeftHeading{
 	float:left;
@@ -260,10 +312,4 @@ menu.background{
 	font-size:12px;
 	text-align:center;
 }
-.menuSubHeader{
-width = 810px;
-height:20px;
-margin-left:-40px;
-padding:2px 0 2px 0;
-background-color:#800517;
-}
+

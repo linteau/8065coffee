@@ -12,26 +12,75 @@
 
 <link rel="stylesheet" type="text/css" href="sandbox.css">
     <script type = "text/javascript" src = "javascript/menu.js"></script>
-    
-    <script>
-        function myFunction()
+ 
+  <script>
+        function foodFunction()
         {
             document.getElementById("menuHeading").innerHTML="Bread";
             document.getElementById("menuContent").innerHTML="Cinnamon Bread .........................40<br>Toasted Bread w/ Butter ..............30<br>Toasted Bread w/ Hazelnut ...........40<br>Grilled Cheese ..........................60<br>Toasted Bread w/ Butter & Bacon ...80<br>Pastillas per Piece .......................5<br>Pastillas per Pack .......................50";
             document.getElementById("rightMenuHeading").style.display="none";
             document.getElementById("rightMenuContent").style.display="none";
-
-            
+			document.getElementById("foodSubNav").style.color="white";
+			document.getElementById("drinkSubNav").style.fontWeight="normal";
+			document.getElementById("drinkSubNav").style.color="black";
+			document.getElementById("menuTitle").innerHTML="Food Menu";
+			document.getElementById("foodSubNav").style.fontWeight="bold";
+			document.getElementById("foodSubNav").style.fontSize="25px";
+            document.getElementById("drinkSubNav").style.fontSize="22px";
         }
-        function drinkFunction()
+        
+		function drinkFunction()
         {
             document.getElementById("menuHeading").innerHTML="Hot Drinks";
             document.getElementById("menuContent").innerHTML="Caffe Latte'.......60<br>Cappuccino .......60<br>Brewed Coffee ...30<br>Americano ........40<br>Caffee Mocha ....80</div>";
             document.getElementById("rightMenuHeading").style.display="block";
             document.getElementById("rightMenuContent").style.display="block";
-
+			document.getElementById("foodSubNav").style.color="black";
+			document.getElementById("foodSubNav").style.fontWeight="normal";
+			document.getElementById("drinkSubNav").style.color="white";
+			document.getElementById("drinkSubNav").style.fontWeight="bold";			
+			document.getElementById("menuTitle").innerHTML="Drink Menu";
+			document.getElementById("foodSubNav").style.fontSize="22px";
+            document.getElementById("drinkSubNav").style.fontSize="25px";
+		
         }
-    </script>
+		function leftSubMenuMouseOver(){			
+			document.getElementById("leftSubMenuBoxSelected").style.backgroundColor="#FC9";
+            document.getElementById("drinkSubNav").style.color="white";
+			}
+
+		function leftSubMenuMouseOut(){
+			document.getElementById("leftSubMenuBoxSelected").style.backgroundColor="#FC0";
+			if(document.getElementById("foodSubNav").style.fontSize=="22px"){
+			document.getElementById("drinkSubNav").style.color="white";
+			}
+			else{
+			document.getElementById("drinkSubNav").style.color="black";
+	
+				}				
+		}
+		function rightSubMenuMouseOver(){	
+			    document.getElementById("rightSubMenuBoxSelected").style.backgroundColor="#fc9";
+			document.getElementById("foodSubNav").style.color="white";
+			
+		}
+		function rightSubMenuMouseOut(){			
+		
+			document.getElementById("rightSubMenuBoxSelected").style.backgroundColor="#FC0";
+			if(document.getElementById("foodSubNav").style.fontSize=="25px"){
+			document.getElementById("foodSubNav").style.color="white";
+			}
+			else{
+			document.getElementById("foodSubNav").style.color="black";
+	
+				}
+			
+		}
+		
+		
+		
+    </script>  
+   
 </head>
 <body class="fullpage">
 <header class="site-wide logo.text">
@@ -44,11 +93,16 @@
 	<a href="about.html">About</a>&nbsp&nbsp|&nbsp&nbsp
 	<a href="hours.html">Hours of Operation</a>
 </nav>
-<menu class = "background" style = "padding-bottom:30px;">
-        <div class = "menuSubHeader">
-            <span style = "margin-left:200px"> <a href = "javascript: void(0);" onclick = "drinkFunction()"> Drinks</a></span>
-        <span style = "float:right; margin-right:200px;"><a href = "javascript: void(0);" onclick = "myFunction()"> Food </a></span>
-            </div>
+<menu class = "background" style = "/* [disabled]padding-bottom:30px; */">
+       
+<a  href = "javascript: void(0);" onClick = "drinkFunction()" ><div id = "leftSubMenuBoxSelected" class="menuSubNavLeft" style="background-color: #FC0;" onMouseOver="leftSubMenuMouseOver()" onMouseOut="leftSubMenuMouseOut()">				             
+  <span id = "drinkSubNav" style = "color:white; font-weight:bold; font-size:25px;">Drinks</span>
+          </div></a>
+          <a  href = "javascript: void(0);" onclick = "foodFunction()" style = "color:black";><div id = "rightSubMenuBoxSelected" class="menuSubNavRight" onClick="foodClick()" onMouseOver="rightSubMenuMouseOver()" onMouseOut="rightSubMenuMouseOut()" style="background-color: #FC0; "> <span id = "foodSubNav" style = "position: relative; font-size: 22px; font-weight: normal;padding-left:70px;">Food</span></div></a>
+          
+          <div style = "clear:both"></div>
+          
+<div id = "menuTitle">Drink Menu</div>
 <div id = "drinks">
         <div class = "menuLeftHeading" id = "menuHeading"> Hot Drinks &nbsp&nbsp</div>
 	<div class = "menuRightHeading" id = "rightMenuHeading"> Cold Drinks&nbsp&nbsp&nbsp </div><div style = "clear:both"></div>
@@ -77,8 +131,7 @@
 	
 	
 </menu>
-<footer class ="text"><a class = "hours" href="index.html">Home</a>&nbsp&nbsp|&nbsp&nbsp
-	<a class = "hours" href="menu.html">Menu</a>&nbsp&nbsp|&nbsp&nbsp
+            <footer class ="text"><span style = "font-size:12px; float:left; padding-left:20px;">8065 Coffee House &copy 2013</span>
 	<a class = "hours" href="contact.html">Contact</a>&nbsp&nbsp|&nbsp&nbsp
 	<a class = "hours" href="about.html">About</a>&nbsp&nbsp|&nbsp&nbsp
 	<a class = "hours" href="hours.html">Hours of Operation</a>
